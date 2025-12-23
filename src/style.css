@@ -4,9 +4,10 @@
   font-weight: 400;
   font-style: normal;
   color: rgb(255, 255, 255);
-  --spotify-black: #000000;
-  --spotify-dark: #121212;
-  --spotify-gray: #393939;
+  --spotify-black: rgb(0, 0, 0);
+  --spotify-sidebar-bg: rgb(38, 35, 35);
+  --spotify-gray: rgb(57, 57, 57);
+  --spotify-gray-hover: rgb(65, 65, 65);
   --spotify-light-gray: #b3b3b3;
   --spotify-green: #1db954;
 }
