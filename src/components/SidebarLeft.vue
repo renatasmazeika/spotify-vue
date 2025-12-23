@@ -9,8 +9,8 @@ const count = ref(0);
 <template>
   <aside class="sidebar-left">
     <div class="sidebar-top">
-      <h1>Your Library</h1>
-      <div class="button-container">
+      <h4>Your Library</h4>
+      <div class="left-side-button-container">
         <button id="create-button">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
             <path
@@ -38,7 +38,7 @@ const count = ref(0);
       <button class="library-filter-button">Podcasts & Shows</button>
     </div>
 
-    <div class="sidebar-list">
+    <div class="sidebar-playlist">
       <ul>
         <li>Playlist 1</li>
         <li>Playlist 2</li>
@@ -132,9 +132,9 @@ const count = ref(0);
 
 <style scoped>
 .sidebar-left {
-  width: 350px;
+  width: 25vw;
   height: 100vh;
-  background-color: rgb(38, 35, 35);
+  background-color: var(--spotify-sidebar-bg);
   display: flex;
   flex-direction: column;
 }
@@ -145,11 +145,15 @@ const count = ref(0);
   margin: 15px 20px;
 }
 
-.sidebar-top h1 {
+.sidebar-top h4 {
   font-size: 14px;
 }
 
-.button-container {
+.sidebar-top h4:hover {
+  cursor: pointer;
+}
+
+.left-side-button-container {
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -161,7 +165,7 @@ const count = ref(0);
   justify-content: center;
   gap: 4px;
   color: white;
-  background: rgb(90, 90, 90);
+  background: var(--spotify-gray);
   border-radius: 50px;
   padding: 5px 12px;
   border: none;
@@ -169,6 +173,7 @@ const count = ref(0);
 
 #create-button:hover {
   cursor: pointer;
+  background-color: var(--spotify-gray-hover);
 }
 
 #create-button svg {
@@ -188,6 +193,11 @@ const count = ref(0);
   line-height: 0;
 }
 
+#expand-button:hover {
+  cursor: pointer;
+  background-color: var(--spotify-gray-hover);
+}
+
 #expand-button svg {
   width: 15px;
   height: 15px;
@@ -195,19 +205,64 @@ const count = ref(0);
   flex-shrink: 0;
 }
 
+.sidebar-filters {
+  padding: 0px 12px 0px 12px;
+  display: flex;
+  align-items: center;
+}
+
 .sidebar-filters button {
   border-radius: 50px;
   padding: 9px 9px;
+  margin: 0px 5px;
   background: var(--spotify-gray);
   color: rgb(255, 255, 255);
   border-style: none;
-  margin: 5px;
   font-size: 12px;
 }
 
-.sidebar-list {
-  overflow-y: auto;
-  margin: 15px;
+.library-filter-button:hover {
+  cursor: pointer;
+  background-color: var(--spotify-gray-hover);
+}
+
+.sidebar-playlist {
+  margin: 10px 0px 0px 5px;
   flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sidebar-playlist::-webkit-scrollbar {
+  width: 10px; /* controls thickness */
+}
+
+.sidebar-playlist::-webkit-scrollbar-track {
+  background: #1f1f1f; /* scrollbar background */
+}
+
+.sidebar-playlist::-webkit-scrollbar-thumb {
+  background: #5a5a5a; /* scrollbar color */
+  border-radius: 10px; /* round edges */
+}
+
+/* Thumb hover effect */
+.sidebar-playlist::-webkit-scrollbar-thumb:hover {
+  background: #7a7a7a;
+}
+
+.sidebar-playlist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-playlist li {
+  padding: 20px;
+}
+
+.sidebar-playlist li:hover {
+  cursor: pointer;
+  background-color: var(--spotify-gray-hover);
+  border-radius: 5px;
 }
 </style>
