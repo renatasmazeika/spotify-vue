@@ -38,93 +38,111 @@ const count = ref(0);
       <button class="library-filter-button">Podcasts & Shows</button>
     </div>
 
+    <div class="sidebar-left-search-bar">
+      <button class="sidebar-left-search-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M10.77 18.3a7.53 7.53 0 1 1 7.53-7.53a7.53 7.53 0 0 1-7.53 7.53m0-13.55a6 6 0 1 0 6 6a6 6 0 0 0-6-6"
+          />
+          <path
+            fill="currentColor"
+            d="M20 20.75a.74.74 0 0 1-.53-.22l-4.13-4.13a.75.75 0 0 1 1.06-1.06l4.13 4.13a.75.75 0 0 1 0 1.06a.74.74 0 0 1-.53.22"
+          />
+        </svg>
+      </button>
+      <button class="sidebar-left-recents-btn">
+        Recents
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M9.616 18.5v-1H20v1zm0-6v-1H20v1zm0-6v-1H20v1zM5.327 19.327q-.547 0-.937-.39T4 18t.39-.937t.937-.39t.937.39t.39.937t-.39.937t-.937.39m0-6q-.547 0-.937-.39T4 12t.39-.937t.937-.39t.937.39t.39.937t-.39.937t-.937.39m0-6q-.547 0-.937-.39T4 6t.39-.937t.937-.39t.937.39t.39.937t-.39.937t-.937.39"
+          />
+        </svg>
+      </button>
+    </div>
+
     <div class="sidebar-playlist">
       <ul>
-        <li>Playlist 1</li>
-        <li>Playlist 2</li>
-        <li>Playlist 3</li>
-        <li>Playlist 4</li>
-        <li>Playlist 5</li>
-        <li>Playlist 6</li>
-        <li>Playlist 7</li>
-        <li>Playlist 8</li>
-        <li>Playlist 9</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
-        <li>Playlist 10</li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
+        <li>
+          <img
+            src="/Users/renatas.mazeika/spotify-vue/src/assets/download (2).jpeg"
+            alt=""
+          />
+          <div>Revoliucijos Garso Takelis</div>
+        </li>
+        <li>
+          <img
+            src="/Users/renatas.mazeika/spotify-vue/src/assets/download (1).jpeg"
+            alt=""
+          />
+          <div>99</div>
+        </li>
+        <li>
+          <img
+            src="/Users/renatas.mazeika/spotify-vue/src/assets/download (3).jpeg"
+            alt=""
+          />
+          <div>sportas</div>
+        </li>
+        <li>
+          <img
+            src="/Users/renatas.mazeika/spotify-vue/src/assets/download.jpeg"
+            alt=""
+          />
+          <div>Imagine Dragons</div>
+        </li>
+        <li>
+          <img
+            src="/Users/renatas.mazeika/spotify-vue/src/assets/images.jpeg"
+            alt=""
+          />
+          <div>C.C Catch</div>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <div>Your Episodes</div>
+        </li>
       </ul>
     </div>
   </aside>
@@ -179,6 +197,7 @@ const count = ref(0);
 #create-button svg {
   width: 15px;
   height: 15px;
+  color: rgb(169, 169, 169);
 }
 
 #expand-button {
@@ -201,8 +220,8 @@ const count = ref(0);
 #expand-button svg {
   width: 15px;
   height: 15px;
-  display: block;
   flex-shrink: 0;
+  color: rgb(169, 169, 169);
 }
 
 .sidebar-filters {
@@ -227,7 +246,7 @@ const count = ref(0);
 }
 
 .sidebar-playlist {
-  margin: 10px 0px 0px 5px;
+  margin-left: 5px;
   flex-grow: 1;
   overflow-y: auto;
 }
@@ -257,12 +276,70 @@ const count = ref(0);
 }
 
 .sidebar-playlist li {
-  padding: 20px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+}
+
+.sidebar-playlist li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 10px;
+  object-fit: cover;
 }
 
 .sidebar-playlist li:hover {
   cursor: pointer;
   background-color: var(--spotify-gray-hover);
   border-radius: 5px;
+}
+
+.sidebar-left-search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0%;
+  margin-top: 10px;
+}
+
+.sidebar-left-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  margin-left: 10px;
+  border: none;
+  color: rgb(169, 169, 169);
+  border-radius: 50px;
+  background: transparent;
+  line-height: 0;
+}
+
+.sidebar-left-search-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar-left-recents-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  gap: 6px;
+  margin-right: 15px;
+  border: none;
+  color: rgb(169, 169, 169);
+  border-radius: 50px;
+  background: transparent;
+  line-height: 0;
+}
+
+.sidebar-left-recents-btn svg {
+  width: 20px;
+  height: 20px;
 }
 </style>

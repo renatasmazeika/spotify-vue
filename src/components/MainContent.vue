@@ -14,6 +14,19 @@ const count = ref(0);
         <button class="main-filter-buttons">Music</button>
         <button class="main-filter-buttons">Podcasts</button>
       </div>
+
+      <div class="quick-access-card-grid">
+        <ul>
+          <li>Playlist name</li>
+          <li>Playlist name</li>
+          <li>Playlist name</li>
+          <li>Playlist name</li>
+          <li>Playlist name</li>
+          <li>Playlist name</li>
+          <li>Playlist name</li>
+          <li>Playlist name</li>
+        </ul>
+      </div>
     </section>
 
     <section class="made-for"></section>
@@ -34,5 +47,13 @@ const count = ref(0);
   width: 50vw;
   border-radius: 10px;
   margin: 0px 7px;
+}
+
+.main-top {
+  display: block;
+}
+
+.quick-access-card-grid ul {
+  list-style: none;
 }
 </style>

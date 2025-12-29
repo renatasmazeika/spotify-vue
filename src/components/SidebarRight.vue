@@ -7,8 +7,6 @@ const count = ref(0);
 </script>
 
 <template>
-  <aside>
-    <h1>Hello</h1>
-  </aside>
+  <aside></aside>
 </template>
 <style scoped></style>
