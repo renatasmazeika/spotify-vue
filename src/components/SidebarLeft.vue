@@ -4,6 +4,133 @@ import { ref } from "vue";
 defineProps<{ msg: string }>();
 
 const count = ref(0);
+
+interface Playlist {
+  id: number;
+  name: string;
+  image: string;
+  type: "playlist" | "artist" | "podcast";
+  tracks: number;
+}
+
+const playlists = ref<Playlist[]>([
+  {
+    id: 1,
+    name: "Your Episodes",
+    image: new URL("../assets/download (1).jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 13,
+  },
+  {
+    id: 2,
+    name: "Running mix",
+    image: new URL("../assets/download (2).jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 56,
+  },
+  {
+    id: 3,
+    name: "Deep Focus",
+    image: new URL("../assets/download (3).jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 25,
+  },
+  {
+    id: 4,
+    name: "Imagine Dragons",
+    image: new URL("../assets/download.jpeg", import.meta.url).href,
+    type: "artist",
+    tracks: 0,
+  },
+  {
+    id: 5,
+    name: "sportas",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 199,
+  },
+  {
+    id: 6,
+    name: "C.C. Catch",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "artist",
+    tracks: 0,
+  },
+  {
+    id: 7,
+    name: "Kano",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "artist",
+    tracks: 0,
+  },
+  {
+    id: 8,
+    name: "Revoliucijos Garso Takelis",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 96,
+  },
+  {
+    id: 9,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+]);
+
+// THESE FUNCTION IS BUILT FOR EDUCATION PURPOSES ONLY
+function calcPlaylistTypes(type: "playlist" | "artist" | "podcast"): number {
+  let playlistCount = 0;
+  let artistCount = 0;
+  let podcastCount = 0;
+
+  for (let i = 0; i < playlists.value.length; i++) {
+    if (playlists.value[i].type === "playlist") {
+      playlistCount++;
+    } else if (playlists.value[i].type === "artist") {
+      artistCount++;
+    } else if (playlists.value[i].type === "podcast") {
+      podcastCount++;
+    } else {
+      console.log("Incorrect type.");
+    }
+  }
+  if (type === "playlist") {
+    return playlistCount;
+  } else if (type === "artist") {
+    return artistCount;
+  } else if (type === "podcast") {
+    return podcastCount;
+  } else {
+    return 0;
+  }
+}
+
+// THIS FUNCTION IS BUILT FOR EDUCATION PURPOSES ONLY
+function calculateTotalTracks(type: string): number {
+  let trackCount = 0;
+  for (let i = 0; i < playlists.value.length; i++) {
+    if (playlists.value[i].type === "playlist") {
+      trackCount += playlists.value[i].tracks;
+    } else {
+    }
+  }
+  return trackCount;
+}
+
+// THIS FUNCTION IS BUILT FOR EDUCATION PURPOSES ONLY
+function getArtists(): Playlist[] {
+  let artistsPlaylist: Playlist[] = [];
+  for (let i = 0; i < playlists.value.length; i++) {
+    if (playlists.value[i].type === "artist") {
+      artistsPlaylist.push(playlists.value[i]);
+    } else {
+      continue;
+    }
+  }
+  return artistsPlaylist;
+}
 </script>
 
 <template>
@@ -51,6 +178,9 @@ const count = ref(0);
           />
         </svg>
       </button>
+      <h6>Playlists: {{ calcPlaylistTypes("playlist") }}</h6>
+      <h6>Artists: {{ calcPlaylistTypes("artist") }}</h6>
+      <h6>Podcasts: {{ calculateTotalTracks("playlist") }}</h6>
       <button class="sidebar-left-recents-btn">
         Recents
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -64,84 +194,12 @@ const count = ref(0);
 
     <div class="sidebar-playlist">
       <ul>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
-        </li>
-        <li>
-          <img
-            src="/Users/renatas.mazeika/spotify-vue/src/assets/download (2).jpeg"
-            alt=""
-          />
-          <div>Revoliucijos Garso Takelis</div>
-        </li>
-        <li>
-          <img
-            src="/Users/renatas.mazeika/spotify-vue/src/assets/download (1).jpeg"
-            alt=""
-          />
-          <div>99</div>
-        </li>
-        <li>
-          <img
-            src="/Users/renatas.mazeika/spotify-vue/src/assets/download (3).jpeg"
-            alt=""
-          />
-          <div>sportas</div>
-        </li>
-        <li>
-          <img
-            src="/Users/renatas.mazeika/spotify-vue/src/assets/download.jpeg"
-            alt=""
-          />
-          <div>Imagine Dragons</div>
-        </li>
-        <li>
-          <img
-            src="/Users/renatas.mazeika/spotify-vue/src/assets/images.jpeg"
-            alt=""
-          />
-          <div>C.C Catch</div>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <div>Your Episodes</div>
+        <li v-for="playlist in playlists" :key="playlist.id">
+          <img :src="playlist.image" />
+          <div class="playlist-info">
+            <span>{{ playlist.name }}</span>
+            <span class="playlist-type">{{ playlist.type }}</span>
+          </div>
         </li>
       </ul>
     </div>
@@ -287,7 +345,6 @@ const count = ref(0);
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  margin-right: 10px;
   object-fit: cover;
 }
 
@@ -295,6 +352,17 @@ const count = ref(0);
   cursor: pointer;
   background-color: var(--spotify-gray-hover);
   border-radius: 5px;
+}
+
+.playlist-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-type {
+  font-size: 12px;
+  color: #9f9f9f;
+  text-transform: capitalize;
 }
 
 .sidebar-left-search-bar {
