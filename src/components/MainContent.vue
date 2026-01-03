@@ -8,7 +8,6 @@ const count = ref(0);
 </script>
 
 <template>
-  <Header />
   <main class="main-section">
     <section class="main-top">
       <div class="main-top-filters">
@@ -82,12 +81,12 @@ const count = ref(0);
     #1c1c1c 60%,
     #121212 100%
   );
+  width: 50vw;
   border-radius: 10px;
   margin: 0px 7px;
   padding: 10px 30px 0 30px;
   overflow-y: auto;
   height: 100%;
-  flex: 1;
 }
 
 .main-top {

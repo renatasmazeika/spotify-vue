@@ -6,12 +6,10 @@ import SidebarRight from "./components/SidebarRight.vue";
 </script>
 
 <template>
-  <div class="app">
-    <!-- HEADER -->
+  <div class="app-layout">
     <Header />
 
-    <!-- BODY -->
-    <div class="body">
+    <div class="content-layout">
       <SidebarLeft />
       <MainContent />
       <SidebarRight />
@@ -20,16 +18,15 @@ import SidebarRight from "./components/SidebarRight.vue";
 </template>
 
 <style>
-.app {
+.app-layout {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* everything below the header */
-.body {
+.content-layout {
   flex: 1;
   display: flex;
-  overflow: hidden;
+  min-height: 0;
 }
 </style>

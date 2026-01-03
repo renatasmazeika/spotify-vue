@@ -288,6 +288,8 @@ function getArtists(): Playlist[] {
   width: 25vw;
   height: 100%;
   background-color: var(--spotify-sidebar-bg);
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
 }
 .sidebar-top {
