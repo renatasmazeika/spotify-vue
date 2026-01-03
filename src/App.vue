@@ -1,21 +1,35 @@
 <script setup lang="ts">
+import Header from "./components/Header.vue";
 import SidebarLeft from "./components/SidebarLeft.vue";
 import MainContent from "./components/MainContent.vue";
 import SidebarRight from "./components/SidebarRight.vue";
 </script>
 
 <template>
-  <div class="main-container">
-    <SidebarLeft />
-    <MainContent />
-    <SidebarRight />
+  <div class="app">
+    <!-- HEADER -->
+    <Header />
+
+    <!-- BODY -->
+    <div class="body">
+      <SidebarLeft />
+      <MainContent />
+      <SidebarRight />
+    </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
-<style scoped>
-.main-container {
+<style>
+.app {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+
+/* everything below the header */
+.body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
 }
 </style>

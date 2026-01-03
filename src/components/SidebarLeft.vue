@@ -77,6 +77,83 @@ const playlists = ref<Playlist[]>([
     type: "playlist",
     tracks: 38,
   },
+  {
+    id: 10,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+  {
+    id: 11,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+  {
+    id: 12,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+  {
+    id: 13,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+  {
+    id: 14,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+  {
+    id: 15,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+  {
+    id: 16,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+  {
+    id: 17,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+  {
+    id: 18,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+  {
+    id: 19,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
+  {
+    id: 20,
+    name: "Deep House 2025",
+    image: new URL("../assets/images.jpeg", import.meta.url).href,
+    type: "playlist",
+    tracks: 38,
+  },
 ]);
 
 // THESE FUNCTION IS BUILT FOR EDUCATION PURPOSES ONLY
@@ -209,10 +286,9 @@ function getArtists(): Playlist[] {
 <style scoped>
 .sidebar-left {
   width: 25vw;
-  height: 100vh;
+  height: 100%;
   background-color: var(--spotify-sidebar-bg);
-  display: flex;
-  flex-direction: column;
+  flex-shrink: 0;
 }
 .sidebar-top {
   display: flex;
@@ -362,7 +438,6 @@ function getArtists(): Playlist[] {
 .playlist-type {
   font-size: 12px;
   color: #9f9f9f;
-  text-transform: capitalize;
 }
 
 .sidebar-left-search-bar {

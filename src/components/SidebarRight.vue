@@ -7,6 +7,12 @@ const count = ref(0);
 </script>
 
 <template>
-  <aside></aside>
+  <aside class="sidebar-right-container"></aside>
 </template>
-<style scoped></style>
+<style scoped>
+.sidebar-right-container {
+  width: 25vw;
+  height: 100%;
+  flex-shrink: 0;
+}
+</style>
